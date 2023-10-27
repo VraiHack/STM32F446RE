@@ -1,6 +1,6 @@
 /* SCHEMATIC:                                                            */
 /* 3 Push button connected to PC0, PC1 and PC2                          */
-/* Build in PA5 LED (hold GREEN LED), and External PA6 (hold YELLOW LED) */
+/* Build in PA5 LED (hold GREEN LED), and External PA6 (hold BLUE LED) */
 
 
 #include "stm32f4xx.h"
@@ -10,9 +10,9 @@ void GPIOAGPIOC_init(void);
 void USART2_init(void);
 void USART2_write(int ch);
 void delayMs(int);
-const byte bufsiz = 4;
+const byte bufsiz = 32;
 
-int buf[bufsiz]; /* allocate space of 3 integer in memory */
+char buf[bufsiz]; /* allocate space of 3 char in memory */
 
 /*----------------------------------------------------------------------------------------------------------------------------
   MAIN FUNCTION
@@ -95,7 +95,7 @@ void GPIOAGPIOC_init(void)
 
   /* PC0 (hold number 1), PC1 (hold number 2), PC2 (hold number 3) and PC3 (hold number 4) used for user password input */
   /* We activated PC3 maybe you need to use 4 button instead of 3 to enter the password*/
-  /* PA5 (hold GREEN LED), PA6 (hold YELLOW LED) */
+  /* PA5 (hold GREEN LED), PA6 (hold BLUE LED) */
   RCC->AHB1ENR |= 4;                /*enable GPIOC clock */
   RCC->AHB1ENR |= 1;               /*enable GPIOA clock */
   GPIOA->MODER &= ~0x00003C00;    /* clear pin mode on PA5 and PA6 */
@@ -148,51 +148,51 @@ int z = thirdbuttontime;
 /* First combination of entered password could be: 123 or 132 or 111 . Note 111 wasn't be taking into consideration in my algorithmic way in the Function Click (need improvement)*/
 if (x < y && y < z)
 {
-  buf[0]=1;
-  buf[1]=2;
-  buf[2]=3;
+  buf[0]='1';
+  buf[1]='2';
+  buf[2]='3';
  
 }
 
 if (x < z && y > z)
 {
-  buf[0]=1;
-  buf[1]=3;
-  buf[2]=2;
+  buf[0]='1';
+  buf[1]='3';
+  buf[2]='2';
   
 }
 
 /* Second combination of entered password could be: 213 or 231 or 222. Note 222 wasn't be taking into consideration in my algorithmic way in the Function Click (need improvement) */
 if (y < x && x < z)
 {
-  buf[0]=2;
-  buf[1]=1;
-  buf[2]=3;
+  buf[0]='2';
+  buf[1]='1';
+  buf[2]='3';
   
 }
 
 if (y < z &&  z < x)
 {
-  buf[0]=2;
-  buf[1]=3;
-  buf[2]=1;
+  buf[0]='2';
+  buf[1]='3';
+  buf[2]='1';
   
 }
 
 /* Third combination of entered password could be: 312 or 321 or 333. Note 333 wasn't be taking into consideration in my algorithmic way in the Function Click (need improvement) */
 if (z < x &&  z < y)
 {
-  buf[0]=3;
-  buf[1]=1;
-  buf[2]=2;
+  buf[0]='3';
+  buf[1]='1';
+  buf[2]='2';
   
 }
 
 if (z < y &&  y < x)
 {
-  buf[0]=3;
-  buf[1]=2;
-  buf[2]=1;
+  buf[0]='3';
+  buf[1]='2';
+  buf[2]='1';
   
 }
 
@@ -202,8 +202,7 @@ validate();
 
 void validate(){
  
-  
-  if (buf[0] == 2 && buf[1] == 1 && buf[2] == 3)
+  if (strcmp(buf, "213") == 0)
   { 
   GPIOA->BSRR = 0x00000040;
 
