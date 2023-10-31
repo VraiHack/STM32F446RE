@@ -6,14 +6,14 @@ About it: a simple authentication application (using the STM32F446RE) where the 
 Code: [Click-Me](https://github.com/VraiHack/STM32F446RE/blob/main/user%20authentication%20(no%20interruption).ino)
 
 Code Improvement: can be done from time to time but at least now you can use this code for your project and due the necessary change according to your need.
-
+-----------------------------------------------------------------------------------------------------------------------------------
 ### Projec- 2: User Authentication with STM32F446RE (with interruption)
 About it:similar to idea to project 1 but this time we are going to use peripheral interrepution.
 
 Coding started: Will be available in 2024 (no plan for it for the moment).
-
+-----------------------------------------------------------------------------------------------------------------------------------
 ### Project-3: Badge Authentication
 Will be started in 2024.
-
+-----------------------------------------------------------------------------------------------------------------------------------
 ### Project-4: STM32F446RE communicate with Arduino via I2C and SPI
 Will be started in 2024.
