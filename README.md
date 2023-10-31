@@ -10,10 +10,10 @@ Code Improvement: can be done from time to time but at least now you can use thi
 ### Projec- 2: User Authentication with STM32F446RE (with interruption)
 About it:similar to idea to project 1 but this time we are going to use peripheral interrepution.
 
-Code started: will be available in December 2023.
+Coding started: Will be available in 2024 (no plan for it for the moment).
 
 ### Project-3: Badge Authentication
-Will be started in 2024 (planed in Mars).
+Will be started in 2024.
 
 ### Project-4: STM32F446RE communicate with Arduino via I2C and SPI
-Will be started in 2024 (no plan for it for the moment).
+Will be started in 2024.
