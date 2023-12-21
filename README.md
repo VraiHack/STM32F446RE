@@ -1,6 +1,6 @@
 ### "Bare metal" C coding with STM32F446RE (Arduino IDE and Keil uVision)
 -----------------------------------------------------------------------------------------------------------------------------------
-### Project-1: User Authentication with STM32F446RE (without interruption)
+### Project-1: User Authentication Application with STM32F446RE (without interruption)
 About it: a simple authentication application (using the STM32F446RE) where the user will be prompted on a serial monitor and asked to enter a Password (using 3 push button), in case of a valid password a Yellow LED turn on and a "Success" message appear on the serial monitor and if not a "Fail" message appear on the monitor.
 
 Code: [Click-Me](https://github.com/VraiHack/STM32F446RE/blob/main/user%20authentication%20(no%20interruption).ino)
