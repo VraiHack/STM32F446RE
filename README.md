@@ -9,17 +9,3 @@ Code Improvement: can be done from time to time but at least now you can use thi
 
 ![image](https://github.com/VraiHack/STM32F446RE-BareMetal/assets/26716241/24b9e7ea-0ec1-4a02-97df-d3e2fd26d7f7)
 
-
------------------------------------------------------------------------------------------------------------------------------------
-### Projec- 2: User Authentication with STM32F446RE (with interruption)
-About it:similar to idea to project 1 but this time we are going to use peripheral interrepution.
-
-Coding started: Will be available in 2024 (no plan for it for the moment).
-
------------------------------------------------------------------------------------------------------------------------------------
-### Project-3: Badge Authentication
-Will be started in 2024.
-
------------------------------------------------------------------------------------------------------------------------------------
-### Project-4: STM32F446RE communicate with Arduino via I2C and SPI
-Will be started in 2024.
