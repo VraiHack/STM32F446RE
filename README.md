@@ -6,6 +6,8 @@ About it: a simple authentication application (using the STM32F446RE) where the 
 Code: [Click-Me](https://github.com/VraiHack/STM32F446RE/blob/main/user%20authentication%20(no%20interruption).ino)
 
 Code Improvement: can be done from time to time but at least now you can use this code for your project and due the necessary change according to your need.
+![image](https://github.com/VraiHack/STM32F446RE-BareMetal/assets/26716241/24b9e7ea-0ec1-4a02-97df-d3e2fd26d7f7)
+
 
 -----------------------------------------------------------------------------------------------------------------------------------
 ### Projec- 2: User Authentication with STM32F446RE (with interruption)
